@@ -1,0 +1,2810 @@
+I0117 15:51:06.249301 102 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x304600000' with size 268435456
+I0117 15:51:06.249862 102 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 1000000000
+E0117 15:51:06.265508 102 model_repository_manager.cc:996] Poll failed for model directory 'riva-trt-conformer-en-US-asr-offline-am-streaming-offline': failed to open text file for read /data/models/riva-trt-conformer-en-US-asr-offline-am-streaming-offline/config.pbtxt: No such file or directory
+E0117 15:51:06.269480 102 model_repository_manager.cc:481] Invalid argument: ensemble conformer-en-US-asr-offline contains models that are not available: riva-trt-conformer-en-US-asr-offline-am-streaming-offline
+I0117 15:51:06.269579 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline:1
+I0117 15:51:06.269684 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-offline-endpointing-streaming-offline:1
+I0117 15:51:06.269770 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-offline-feature-extractor-streaming-offline:1
+I0117 15:51:06.269846 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming:1
+I0117 15:51:06.269908 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-streaming-endpointing-streaming:1
+I0117 15:51:06.269975 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-streaming-feature-extractor-streaming:1
+I0117 15:51:06.270066 102 model_lifecycle.cc:459] loading: riva-onnx-fastpitch_encoder-English-US:1
+I0117 15:51:06.270137 102 model_lifecycle.cc:459] loading: riva-punctuation-en-US:1
+I0117 15:51:06.270189 102 model_lifecycle.cc:459] loading: riva-trt-conformer-en-US-asr-streaming-am-streaming:1
+I0117 15:51:06.270239 102 model_lifecycle.cc:459] loading: riva-trt-hifigan-English-US:1
+I0117 15:51:06.270289 102 model_lifecycle.cc:459] loading: riva-trt-riva-punctuation-en-US-nn-bert-base-uncased:1
+I0117 15:51:06.270347 102 model_lifecycle.cc:459] loading: spectrogram_chunker-English-US:1
+I0117 15:51:06.270396 102 model_lifecycle.cc:459] loading: tts_postprocessor-English-US:1
+I0117 15:51:06.270456 102 model_lifecycle.cc:459] loading: tts_preprocessor-English-US:1
+I0117 15:51:06.283210 102 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0117 15:51:06.283255 102 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0117 15:51:06.283338 102 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0117 15:51:06.283360 102 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0117 15:51:06.299550 102 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: riva-onnx-fastpitch_encoder-English-US (version 1)
+I0117 15:51:06.986751 102 onnxruntime.cc:2606] TRITONBACKEND_ModelInstanceInitialize: riva-onnx-fastpitch_encoder-English-US_0 (GPU device 0)
+2024-01-17 15:51:09.795429773 [W:onnxruntime:, session_state.cc:1030 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an negative impact on performance. e.g. ORT explicitly assigns shape related ops to CPU to improve perf.
+2024-01-17 15:51:09.795458517 [W:onnxruntime:, session_state.cc:1032 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.
+I0117 15:51:11.642412 102 model_lifecycle.cc:693] successfully loaded 'riva-onnx-fastpitch_encoder-English-US' version 1
+I0117 15:51:11.643725 102 tensorrt.cc:5444] TRITONBACKEND_Initialize: tensorrt
+I0117 15:51:11.643756 102 tensorrt.cc:5454] Triton TRITONBACKEND API version: 1.10
+I0117 15:51:11.644040 102 tensorrt.cc:5460] 'tensorrt' TRITONBACKEND API version: 1.10
+I0117 15:51:11.644059 102 tensorrt.cc:5488] backend configuration:
+{"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0117 15:51:11.644515 102 pipeline_library.cc:24] TRITONBACKEND_ModelInitialize: riva-punctuation-en-US (version 1)
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0117 15:51:11.645260   115 parameter_parser.cc:146] Parameter 'attn_mask_tensor_name' set but unused.
+W0117 15:51:11.645277   115 parameter_parser.cc:146] Parameter 'bos_token' set but unused.
+W0117 15:51:11.645278   115 parameter_parser.cc:146] Parameter 'capit_logits_tensor_name' set but unused.
+W0117 15:51:11.645280   115 parameter_parser.cc:146] Parameter 'capitalization_mapping_path' set but unused.
+W0117 15:51:11.645282   115 parameter_parser.cc:146] Parameter 'delimiter' set but unused.
+W0117 15:51:11.645282   115 parameter_parser.cc:146] Parameter 'eos_token' set but unused.
+W0117 15:51:11.645283   115 parameter_parser.cc:146] Parameter 'input_ids_tensor_name' set but unused.
+W0117 15:51:11.645284   115 parameter_parser.cc:146] Parameter 'language_code' set but unused.
+W0117 15:51:11.645285   115 parameter_parser.cc:146] Parameter 'load_model' set but unused.
+W0117 15:51:11.645287   115 parameter_parser.cc:146] Parameter 'model_api' set but unused.
+W0117 15:51:11.645287   115 parameter_parser.cc:146] Parameter 'model_family' set but unused.
+W0117 15:51:11.645287   115 parameter_parser.cc:146] Parameter 'model_name' set but unused.
+W0117 15:51:11.645288   115 parameter_parser.cc:146] Parameter 'pad_chars_with_spaces' set but unused.
+W0117 15:51:11.645289   115 parameter_parser.cc:146] Parameter 'pipeline_type' set but unused.
+W0117 15:51:11.645290   115 parameter_parser.cc:146] Parameter 'preserve_accents' set but unused.
+W0117 15:51:11.645292   115 parameter_parser.cc:146] Parameter 'punct_logits_tensor_name' set but unused.
+W0117 15:51:11.645292   115 parameter_parser.cc:146] Parameter 'punctuation_mapping_path' set but unused.
+W0117 15:51:11.645293   115 parameter_parser.cc:146] Parameter 'remove_spaces' set but unused.
+W0117 15:51:11.645294   115 parameter_parser.cc:146] Parameter 'to_lower' set but unused.
+W0117 15:51:11.645295   115 parameter_parser.cc:146] Parameter 'token_type_tensor_name' set but unused.
+W0117 15:51:11.645296   115 parameter_parser.cc:146] Parameter 'tokenizer' set but unused.
+W0117 15:51:11.645298   115 parameter_parser.cc:146] Parameter 'tokenizer_to_lower' set but unused.
+W0117 15:51:11.645298   115 parameter_parser.cc:146] Parameter 'unicode_normalize' set but unused.
+W0117 15:51:11.645299   115 parameter_parser.cc:146] Parameter 'unk_token' set but unused.
+W0117 15:51:11.645300   115 parameter_parser.cc:146] Parameter 'use_int64_nn_inputs' set but unused.
+W0117 15:51:11.645301   115 parameter_parser.cc:146] Parameter 'vocab' set but unused.
+W0117 15:51:11.645643   115 parameter_parser.cc:146] Parameter 'attn_mask_tensor_name' set but unused.
+W0117 15:51:11.645656   115 parameter_parser.cc:146] Parameter 'bos_token' set but unused.
+W0117 15:51:11.645658   115 parameter_parser.cc:146] Parameter 'capit_logits_tensor_name' set but unused.
+W0117 15:51:11.645660   115 parameter_parser.cc:146] Parameter 'capitalization_mapping_path' set but unused.
+W0117 15:51:11.645661   115 parameter_parser.cc:146] Parameter 'delimiter' set but unused.
+W0117 15:51:11.645663   115 parameter_parser.cc:146] Parameter 'eos_token' set but unused.
+W0117 15:51:11.645663   115 parameter_parser.cc:146] Parameter 'input_ids_tensor_name' set but unused.
+W0117 15:51:11.645664   115 parameter_parser.cc:146] Parameter 'language_code' set but unused.
+W0117 15:51:11.645665   115 parameter_parser.cc:146] Parameter 'model_api' set but unused.
+W0117 15:51:11.645666   115 parameter_parser.cc:146] Parameter 'model_family' set but unused.
+W0117 15:51:11.645668   115 parameter_parser.cc:146] Parameter 'model_name' set but unused.
+W0117 15:51:11.645668   115 parameter_parser.cc:146] Parameter 'pad_chars_with_spaces' set but unused.
+W0117 15:51:11.645669   115 parameter_parser.cc:146] Parameter 'preserve_accents' set but unused.
+W0117 15:51:11.645670   115 parameter_parser.cc:146] Parameter 'punct_logits_tensor_name' set but unused.
+W0117 15:51:11.645671   115 parameter_parser.cc:146] Parameter 'punctuation_mapping_path' set but unused.
+W0117 15:51:11.645673   115 parameter_parser.cc:146] Parameter 'remove_spaces' set but unused.
+W0117 15:51:11.645673   115 parameter_parser.cc:146] Parameter 'to_lower' set but unused.
+W0117 15:51:11.645674   115 parameter_parser.cc:146] Parameter 'token_type_tensor_name' set but unused.
+W0117 15:51:11.645675   115 parameter_parser.cc:146] Parameter 'tokenizer' set but unused.
+W0117 15:51:11.645676   115 parameter_parser.cc:146] Parameter 'tokenizer_to_lower' set but unused.
+W0117 15:51:11.645677   115 parameter_parser.cc:146] Parameter 'unicode_normalize' set but unused.
+W0117 15:51:11.645678   115 parameter_parser.cc:146] Parameter 'unk_token' set but unused.
+W0117 15:51:11.645679   115 parameter_parser.cc:146] Parameter 'use_int64_nn_inputs' set but unused.
+W0117 15:51:11.645680   115 parameter_parser.cc:146] Parameter 'vocab' set but unused.
+W0117 15:51:11.645697   115 parameter_parser.cc:146] Parameter 'attn_mask_tensor_name' set but unused.
+W0117 15:51:11.645706   115 parameter_parser.cc:146] Parameter 'bos_token' set but unused.
+W0117 15:51:11.645707   115 parameter_parser.cc:146] Parameter 'capit_logits_tensor_name' set but unused.
+W0117 15:51:11.645709   115 parameter_parser.cc:146] Parameter 'capitalization_mapping_path' set but unused.
+W0117 15:51:11.645709   115 parameter_parser.cc:146] Parameter 'delimiter' set but unused.
+W0117 15:51:11.645710   115 parameter_parser.cc:146] Parameter 'eos_token' set but unused.
+W0117 15:51:11.645711   115 parameter_parser.cc:146] Parameter 'input_ids_tensor_name' set but unused.
+W0117 15:51:11.645712   115 parameter_parser.cc:146] Parameter 'language_code' set but unused.
+W0117 15:51:11.645713   115 parameter_parser.cc:146] Parameter 'model_api' set but unused.
+W0117 15:51:11.645714   115 parameter_parser.cc:146] Parameter 'model_family' set but unused.
+W0117 15:51:11.645715   115 parameter_parser.cc:146] Parameter 'model_name' set but unused.
+W0117 15:51:11.645716   115 parameter_parser.cc:146] Parameter 'pad_chars_with_spaces' set but unused.
+W0117 15:51:11.645717   115 parameter_parser.cc:146] Parameter 'preserve_accents' set but unused.
+W0117 15:51:11.645720   115 parameter_parser.cc:146] Parameter 'punct_logits_tensor_name' set but unused.
+W0117 15:51:11.645721   115 parameter_parser.cc:146] Parameter 'punctuation_mapping_path' set but unused.
+W0117 15:51:11.645723   115 parameter_parser.cc:146] Parameter 'remove_spaces' set but unused.
+W0117 15:51:11.645725   115 parameter_parser.cc:146] Parameter 'to_lower' set but unused.
+W0117 15:51:11.645726   115 parameter_parser.cc:146] Parameter 'token_type_tensor_name' set but unused.
+W0117 15:51:11.645728   115 parameter_parser.cc:146] Parameter 'tokenizer_to_lower' set but unused.
+W0117 15:51:11.645731   115 parameter_parser.cc:146] Parameter 'unicode_normalize' set but unused.
+W0117 15:51:11.645732   115 parameter_parser.cc:146] Parameter 'unk_token' set but unused.
+W0117 15:51:11.645735   115 parameter_parser.cc:146] Parameter 'use_int64_nn_inputs' set but unused.
+W0117 15:51:11.645735   115 parameter_parser.cc:146] Parameter 'vocab' set but unused.
+W0117 15:51:11.646085   115 parameter_parser.cc:146] Parameter 'model_api' set but unused.
+W0117 15:51:11.646101   115 parameter_parser.cc:146] Parameter 'model_family' set but unused.
+I0117 15:51:11.646178 102 backend_model.cc:303] model configuration:
+{
+    "name": "riva-punctuation-en-US",
+    "platform": "",
+    "backend": "riva_nlp_pipeline",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 8,
+    "input": [
+        {
+            "name": "PIPELINE_INPUT",
+            "data_type": "TYPE_STRING",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "PIPELINE_OUTPUT",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "priority": "PRIORITY_DEFAULT",
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "instance_group": [
+        {
+            "name": "riva-punctuation-en-US_0",
+            "kind": "KIND_CPU",
+            "count": 1,
+            "gpus": [],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "pad_chars_with_spaces": {
+            "string_value": "False"
+        },
+        "tokenizer_to_lower": {
+            "string_value": "true"
+        },
+        "eos_token": {
+            "string_value": "[SEP]"
+        },
+        "bos_token": {
+            "string_value": "[CLS]"
+        },
+        "load_model": {
+            "string_value": "false"
+        },
+        "capit_logits_tensor_name": {
+            "string_value": "capit_logits"
+        },
+        "vocab": {
+            "string_value": "/data/models/riva-punctuation-en-US/1/f92889b136d2433693cb9127e1aea218_vocab.txt"
+        },
+        "delimiter": {
+            "string_value": " "
+        },
+        "punctuation_mapping_path": {
+            "string_value": "/data/models/riva-punctuation-en-US/1/bf74918539724a61a0d7703134519ea5_punct_label_ids.csv"
+        },
+        "language_code": {
+            "string_value": "en-US"
+        },
+        "model_family": {
+            "string_value": "riva"
+        },
+        "to_lower": {
+            "string_value": "true"
+        },
+        "remove_spaces": {
+            "string_value": "False"
+        },
+        "model_name": {
+            "string_value": "riva-trt-riva-punctuation-en-US-nn-bert-base-uncased"
+        },
+        "use_int64_nn_inputs": {
+            "string_value": "False"
+        },
+        "preserve_accents": {
+            "string_value": "false"
+        },
+        "tokenizer": {
+            "string_value": "wordpiece"
+        },
+        "unicode_normalize": {
+            "string_value": "False"
+        },
+        "capitalization_mapping_path": {
+            "string_value": "/data/models/riva-punctuation-en-US/1/56633d0a0d8e459b9c8acd572cfa34b8_capit_label_ids.csv"
+        },
+        "input_ids_tensor_name": {
+            "string_value": "input_ids"
+        },
+        "model_api": {
+            "string_value": "/nvidia.riva.nlp.RivaLanguageUnderstanding/PunctuateText"
+        },
+        "token_type_tensor_name": {
+            "string_value": "token_type_ids"
+        },
+        "punct_logits_tensor_name": {
+            "string_value": "punct_logits"
+        },
+        "attn_mask_tensor_name": {
+            "string_value": "attention_mask"
+        },
+        "unk_token": {
+            "string_value": "[UNK]"
+        },
+        "pipeline_type": {
+            "string_value": "punctuation"
+        }
+    },
+    "model_warmup": []
+}
+I0117 15:51:11.646242 102 tensorrt.cc:5578] TRITONBACKEND_ModelInitialize: riva-trt-conformer-en-US-asr-streaming-am-streaming (version 1)
+I0117 15:51:11.647232 102 tensorrt.cc:5578] TRITONBACKEND_ModelInitialize: riva-trt-riva-punctuation-en-US-nn-bert-base-uncased (version 1)
+I0117 15:51:11.652924 102 pipeline_library.cc:28] TRITONBACKEND_ModelInstanceInitialize: riva-punctuation-en-US_0 (device 0)
+I0117 15:51:11.674246 102 tensorrt.cc:5627] TRITONBACKEND_ModelInstanceInitialize: riva-trt-conformer-en-US-asr-streaming-am-streaming_0 (GPU device 0)
+I0117 15:51:11.674444 102 model_lifecycle.cc:693] successfully loaded 'riva-punctuation-en-US' version 1
+I0117 15:51:12.969137 102 logging.cc:49] Loaded engine size: 335 MiB
+I0117 15:51:13.424524 102 logging.cc:49] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 4423, GPU 3552 (MiB)
+I0117 15:51:13.427790 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +317, now: CPU 0, GPU 317 (MiB)
+I0117 15:51:13.450017 102 logging.cc:49] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 3752, GPU 3552 (MiB)
+I0117 15:51:14.587910 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +696, now: CPU 0, GPU 1013 (MiB)
+W0117 15:51:14.587943 102 logging.cc:46] CUDA lazy loading is not enabled. Enabling it can significantly reduce device memory usage. See `CUDA_MODULE_LOADING` in https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-vars
+I0117 15:51:15.493967 102 tensorrt.cc:1547] Created instance riva-trt-conformer-en-US-asr-streaming-am-streaming_0 on GPU 0 with stream priority 0 and optimization profile default[0];
+I0117 15:51:15.494033 102 tensorrt.cc:5627] TRITONBACKEND_ModelInstanceInitialize: riva-trt-riva-punctuation-en-US-nn-bert-base-uncased_0 (GPU device 0)
+I0117 15:51:15.495048 102 model_lifecycle.cc:693] successfully loaded 'riva-trt-conformer-en-US-asr-streaming-am-streaming' version 1
+I0117 15:51:16.115679 102 logging.cc:49] Loaded engine size: 417 MiB
+I0117 15:51:16.407187 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +415, now: CPU 0, GPU 1428 (MiB)
+I0117 15:51:16.904130 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +39, now: CPU 0, GPU 1467 (MiB)
+W0117 15:51:16.904165 102 logging.cc:46] CUDA lazy loading is not enabled. Enabling it can significantly reduce device memory usage. See `CUDA_MODULE_LOADING` in https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-vars
+I0117 15:51:16.904397 102 tensorrt.cc:1547] Created instance riva-trt-riva-punctuation-en-US-nn-bert-base-uncased_0 on GPU 0 with stream priority 0 and optimization profile default[0];
+I0117 15:51:16.904762 102 feature-extractor.cc:415] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-streaming-feature-extractor-streaming (version 1)
+I0117 15:51:16.904956 102 model_lifecycle.cc:693] successfully loaded 'riva-trt-riva-punctuation-en-US-nn-bert-base-uncased' version 1
+I0117 15:51:16.923005 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-streaming-feature-extractor-streaming",
+    "platform": "",
+    "backend": "riva_asr_features",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 1024,
+    "input": [
+        {
+            "name": "AUDIO_SIGNAL",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "SAMPLE_RATE",
+            "data_type": "TYPE_UINT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "AUDIO_FEATURES",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                80,
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "AUDIO_PROCESSED",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "AUDIO_FEATURES_LENGTH",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 1024,
+            "preferred_batch_size": [
+                256,
+                512
+            ],
+            "max_queue_delay_microseconds": 1000
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-streaming-feature-extractor-streaming_0",
+            "kind": "KIND_GPU",
+            "count": 1,
+            "gpus": [
+                0
+            ],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "norm_per_feature": {
+            "string_value": "True"
+        },
+        "transpose": {
+            "string_value": "False"
+        },
+        "stddev": {
+            "string_value": "2.2668, 3.1642, 3.7079, 3.7642, 3.5349, 3.5901, 3.7640, 3.8424, 4.0145, 4.1475, 4.0457, 3.9048, 3.7709, 3.6117, 3.3188, 3.1489, 3.0615, 3.0362, 2.9929, 3.0500, 3.0341, 3.0484, 3.0103, 2.9474, 2.9128, 2.8669, 2.8332, 2.9411, 3.0378, 3.0712, 3.0190, 2.9992, 3.0124, 3.0024, 3.0275, 3.0870, 3.0656, 3.0142, 3.0493, 3.1373, 3.1135, 3.0675, 2.8828, 2.7018, 2.6296, 2.8826, 2.9325, 2.9288, 2.9271, 2.9890, 3.0137, 2.9855, 3.0839, 2.9319, 2.3512, 2.3795, 2.6191, 2.7555, 2.9326, 2.9931, 3.1543, 3.0855, 2.6820, 3.0566, 3.1272, 3.1663, 3.1836, 3.0018, 2.9089, 3.1727, 3.1626, 3.1086, 2.9804, 3.1107, 3.2998, 3.3697, 3.3716, 3.2487, 3.1597, 3.1181"
+        },
+        "left_padding_size": {
+            "string_value": "1.92"
+        },
+        "precalc_norm_time_steps": {
+            "string_value": "0"
+        },
+        "gain": {
+            "string_value": "1.0"
+        },
+        "stddev_floor": {
+            "string_value": "1e-05"
+        },
+        "sample_rate": {
+            "string_value": "16000"
+        },
+        "use_utterance_norm_params": {
+            "string_value": "False"
+        },
+        "mean": {
+            "string_value": "-11.4412,  -9.9334,  -9.1292,  -9.0365,  -9.2804,  -9.5643,  -9.7342, -9.6925,  -9.6333,  -9.2808,  -9.1887,  -9.1422,  -9.1397,  -9.2028, -9.2749,  -9.4776,  -9.9185, -10.1557, -10.3800, -10.5067, -10.3190, -10.4728, -10.5529, -10.6402, -10.6440, -10.5113, -10.7395, -10.7870, -10.6074, -10.5033, -10.8278, -10.6384, -10.8481, -10.6875, -10.5454, -10.4747, -10.5165, -10.4930, -10.3413, -10.3472, -10.3735, -10.6830, -10.8813, -10.6338, -10.3856, -10.7727, -10.8957, -10.8068, -10.7373, -10.6108, -10.3405, -10.2889, -10.3922, -10.4946, -10.3367, -10.4164, -10.9949, -10.7196, -10.3971, -10.1734,  -9.9257,  -9.6557,  -9.1761, -9.6653,  -9.7876,  -9.7230,  -9.7792,  -9.7056,  -9.2702,  -9.4650, -9.2755,  -9.1369,  -9.1174,  -8.9197,  -8.5394,  -8.2614,  -8.1353, -8.1422,  -8.3430,  -8.6655"
+        },
+        "apply_normalization": {
+            "string_value": "True"
+        },
+        "window_size": {
+            "string_value": "0.025"
+        },
+        "window_stride": {
+            "string_value": "0.01"
+        },
+        "max_execution_batch_size": {
+            "string_value": "1024"
+        },
+        "precalc_norm_params": {
+            "string_value": "False"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "chunk_size": {
+            "string_value": "0.16"
+        },
+        "right_padding_size": {
+            "string_value": "1.92"
+        },
+        "num_features": {
+            "string_value": "80"
+        },
+        "dither": {
+            "string_value": "0.0"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:16.923119 102 tensorrt.cc:5578] TRITONBACKEND_ModelInitialize: riva-trt-hifigan-English-US (version 1)
+I0117 15:51:16.923607 102 backend_model.cc:188] Overriding execution policy to "TRITONBACKEND_EXECUTION_BLOCKING" for sequence model "riva-trt-hifigan-English-US"
+I0117 15:51:16.928671 102 feature-extractor.cc:415] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-offline-feature-extractor-streaming-offline (version 1)
+I0117 15:51:16.929685 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-offline-feature-extractor-streaming-offline",
+    "platform": "",
+    "backend": "riva_asr_features",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 512,
+    "input": [
+        {
+            "name": "AUDIO_SIGNAL",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "SAMPLE_RATE",
+            "data_type": "TYPE_UINT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "AUDIO_FEATURES",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                80,
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "AUDIO_PROCESSED",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 512,
+            "preferred_batch_size": [
+                256,
+                512
+            ],
+            "max_queue_delay_microseconds": 1000
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-offline-feature-extractor-streaming-offline_0",
+            "kind": "KIND_GPU",
+            "count": 1,
+            "gpus": [
+                0
+            ],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "apply_normalization": {
+            "string_value": "True"
+        },
+        "max_execution_batch_size": {
+            "string_value": "512"
+        },
+        "dither": {
+            "string_value": "0.0"
+        },
+        "mean": {
+            "string_value": "-11.4412,  -9.9334,  -9.1292,  -9.0365,  -9.2804,  -9.5643,  -9.7342, -9.6925,  -9.6333,  -9.2808,  -9.1887,  -9.1422,  -9.1397,  -9.2028, -9.2749,  -9.4776,  -9.9185, -10.1557, -10.3800, -10.5067, -10.3190, -10.4728, -10.5529, -10.6402, -10.6440, -10.5113, -10.7395, -10.7870, -10.6074, -10.5033, -10.8278, -10.6384, -10.8481, -10.6875, -10.5454, -10.4747, -10.5165, -10.4930, -10.3413, -10.3472, -10.3735, -10.6830, -10.8813, -10.6338, -10.3856, -10.7727, -10.8957, -10.8068, -10.7373, -10.6108, -10.3405, -10.2889, -10.3922, -10.4946, -10.3367, -10.4164, -10.9949, -10.7196, -10.3971, -10.1734,  -9.9257,  -9.6557,  -9.1761, -9.6653,  -9.7876,  -9.7230,  -9.7792,  -9.7056,  -9.2702,  -9.4650, -9.2755,  -9.1369,  -9.1174,  -8.9197,  -8.5394,  -8.2614,  -8.1353, -8.1422,  -8.3430,  -8.6655"
+        },
+        "gain": {
+            "string_value": "1.0"
+        },
+        "chunk_size": {
+            "string_value": "4.8"
+        },
+        "stddev_floor": {
+            "string_value": "1e-05"
+        },
+        "right_padding_size": {
+            "string_value": "1.6"
+        },
+        "sample_rate": {
+            "string_value": "16000"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "norm_per_feature": {
+            "string_value": "True"
+        },
+        "use_utterance_norm_params": {
+            "string_value": "False"
+        },
+        "left_padding_size": {
+            "string_value": "1.6"
+        },
+        "window_stride": {
+            "string_value": "0.01"
+        },
+        "precalc_norm_time_steps": {
+            "string_value": "0"
+        },
+        "transpose": {
+            "string_value": "False"
+        },
+        "num_features": {
+            "string_value": "80"
+        },
+        "stddev": {
+            "string_value": "2.2668, 3.1642, 3.7079, 3.7642, 3.5349, 3.5901, 3.7640, 3.8424, 4.0145, 4.1475, 4.0457, 3.9048, 3.7709, 3.6117, 3.3188, 3.1489, 3.0615, 3.0362, 2.9929, 3.0500, 3.0341, 3.0484, 3.0103, 2.9474, 2.9128, 2.8669, 2.8332, 2.9411, 3.0378, 3.0712, 3.0190, 2.9992, 3.0124, 3.0024, 3.0275, 3.0870, 3.0656, 3.0142, 3.0493, 3.1373, 3.1135, 3.0675, 2.8828, 2.7018, 2.6296, 2.8826, 2.9325, 2.9288, 2.9271, 2.9890, 3.0137, 2.9855, 3.0839, 2.9319, 2.3512, 2.3795, 2.6191, 2.7555, 2.9326, 2.9931, 3.1543, 3.0855, 2.6820, 3.0566, 3.1272, 3.1663, 3.1836, 3.0018, 2.9089, 3.1727, 3.1626, 3.1086, 2.9804, 3.1107, 3.2998, 3.3697, 3.3716, 3.2487, 3.1597, 3.1181"
+        },
+        "precalc_norm_params": {
+            "string_value": "False"
+        },
+        "window_size": {
+            "string_value": "0.025"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:16.929758 102 feature-extractor.cc:417] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-streaming-feature-extractor-streaming_0 (device 0)
+I0117 15:51:17.041612 102 tensorrt.cc:5627] TRITONBACKEND_ModelInstanceInitialize: riva-trt-hifigan-English-US_0 (GPU device 0)
+I0117 15:51:17.043972 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-streaming-feature-extractor-streaming' version 1
+I0117 15:51:17.068764 102 logging.cc:49] Loaded engine size: 29 MiB
+I0117 15:51:17.101096 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +1, GPU +28, now: CPU 1, GPU 1495 (MiB)
+I0117 15:51:17.107858 102 logging.cc:49] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +182, now: CPU 1, GPU 1677 (MiB)
+W0117 15:51:17.107889 102 logging.cc:46] CUDA lazy loading is not enabled. Enabling it can significantly reduce device memory usage. See `CUDA_MODULE_LOADING` in https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-vars
+I0117 15:51:17.109156 102 tensorrt.cc:1547] Created instance riva-trt-hifigan-English-US_0 on GPU 0 with stream priority 0 and optimization profile default[0];
+I0117 15:51:17.109226 102 spectrogram-chunker.cc:270] TRITONBACKEND_ModelInitialize: spectrogram_chunker-English-US (version 1)
+I0117 15:51:17.110164 102 backend_model.cc:303] model configuration:
+{
+    "name": "spectrogram_chunker-English-US",
+    "platform": "",
+    "backend": "riva_tts_chunker",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 8,
+    "input": [
+        {
+            "name": "SPECTROGRAM",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                80,
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "IS_LAST_SENTENCE",
+            "data_type": "TYPE_INT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "NUM_VALID_FRAMES_IN",
+            "data_type": "TYPE_INT64",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "SENTENCE_NUM",
+            "data_type": "TYPE_INT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "DURATIONS",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "PROCESSED_TEXT",
+            "data_type": "TYPE_STRING",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "VOLUME",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "SPECTROGRAM_CHUNK",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                80,
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "END_FLAG",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "NUM_VALID_SAMPLES_OUT",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "SENTENCE_NUM",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "DURATIONS",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PROCESSED_TEXT",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "VOLUME",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "priority": "PRIORITY_DEFAULT",
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 8,
+            "preferred_batch_size": [
+                8
+            ],
+            "max_queue_delay_microseconds": 1000
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "spectrogram_chunker-English-US_0",
+            "kind": "KIND_GPU",
+            "count": 1,
+            "gpus": [
+                0
+            ],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "num_mels": {
+            "string_value": "80"
+        },
+        "chunk_length": {
+            "string_value": "80"
+        },
+        "max_execution_batch_size": {
+            "string_value": "8"
+        },
+        "num_samples_per_frame": {
+            "string_value": "512"
+        },
+        "supports_volume": {
+            "string_value": "True"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": true
+    }
+}
+I0117 15:51:17.110207 102 model_lifecycle.cc:693] successfully loaded 'riva-trt-hifigan-English-US' version 1
+I0117 15:51:17.147161 102 feature-extractor.cc:417] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-offline-feature-extractor-streaming-offline_0 (device 0)
+I0117 15:51:17.513389 102 spectrogram-chunker.cc:272] TRITONBACKEND_ModelInstanceInitialize: spectrogram_chunker-English-US_0 (device 0)
+I0117 15:51:17.513520 102 ctc-decoder-library.cc:21] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline (version 1)
+I0117 15:51:17.514609 102 model_lifecycle.cc:693] successfully loaded 'spectrogram_chunker-English-US' version 1
+I0117 15:51:17.514658 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-offline-feature-extractor-streaming-offline' version 1
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0117 15:51:17.514946   108 parameter_parser.cc:146] Parameter 'append_space_to_transcripts' set but unused.
+W0117 15:51:17.514971   108 parameter_parser.cc:146] Parameter 'beam_size' set but unused.
+W0117 15:51:17.514974   108 parameter_parser.cc:146] Parameter 'beam_size_token' set but unused.
+W0117 15:51:17.514976   108 parameter_parser.cc:146] Parameter 'beam_threshold' set but unused.
+W0117 15:51:17.514977   108 parameter_parser.cc:146] Parameter 'blank_token' set but unused.
+W0117 15:51:17.514979   108 parameter_parser.cc:146] Parameter 'cased' set but unused.
+W0117 15:51:17.514981   108 parameter_parser.cc:146] Parameter 'decoder_num_worker_threads' set but unused.
+W0117 15:51:17.514983   108 parameter_parser.cc:146] Parameter 'forerunner_beam_size' set but unused.
+W0117 15:51:17.514984   108 parameter_parser.cc:146] Parameter 'forerunner_beam_size_token' set but unused.
+W0117 15:51:17.514986   108 parameter_parser.cc:146] Parameter 'forerunner_beam_threshold' set but unused.
+W0117 15:51:17.514987   108 parameter_parser.cc:146] Parameter 'forerunner_use_lm' set but unused.
+W0117 15:51:17.514988   108 parameter_parser.cc:146] Parameter 'language_model_file' set but unused.
+W0117 15:51:17.514990   108 parameter_parser.cc:146] Parameter 'lexicon_file' set but unused.
+W0117 15:51:17.514991   108 parameter_parser.cc:146] Parameter 'lm_weight' set but unused.
+W0117 15:51:17.514994   108 parameter_parser.cc:146] Parameter 'log_add' set but unused.
+W0117 15:51:17.514995   108 parameter_parser.cc:146] Parameter 'max_execution_batch_size' set but unused.
+W0117 15:51:17.514997   108 parameter_parser.cc:146] Parameter 'max_supported_transcripts' set but unused.
+W0117 15:51:17.514998   108 parameter_parser.cc:146] Parameter 'num_tokenization' set but unused.
+W0117 15:51:17.514999   108 parameter_parser.cc:146] Parameter 'profane_words_file' set but unused.
+W0117 15:51:17.515002   108 parameter_parser.cc:146] Parameter 'return_separate_utterances' set but unused.
+W0117 15:51:17.515005   108 parameter_parser.cc:146] Parameter 'set_default_index_to_unk_token' set but unused.
+W0117 15:51:17.515007   108 parameter_parser.cc:146] Parameter 'sil_token' set but unused.
+W0117 15:51:17.515007   108 parameter_parser.cc:146] Parameter 'smearing_mode' set but unused.
+W0117 15:51:17.515012   108 parameter_parser.cc:146] Parameter 'tokenizer_model' set but unused.
+W0117 15:51:17.515013   108 parameter_parser.cc:146] Parameter 'unk_score' set but unused.
+W0117 15:51:17.515014   108 parameter_parser.cc:146] Parameter 'unk_token' set but unused.
+W0117 15:51:17.515017   108 parameter_parser.cc:146] Parameter 'use_lexicon_free_decoding' set but unused.
+W0117 15:51:17.515017   108 parameter_parser.cc:146] Parameter 'vocab_file' set but unused.
+W0117 15:51:17.515020   108 parameter_parser.cc:146] Parameter 'word_insertion_score' set but unused.
+I0117 15:51:17.517433 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline",
+    "platform": "",
+    "backend": "riva_asr_decoder",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 1024,
+    "input": [
+        {
+            "name": "CLASS_LOGITS",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                129
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "END_FLAG",
+            "data_type": "TYPE_UINT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "SEGMENTS_START_END",
+            "data_type": "TYPE_INT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                2
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "CUSTOM_CONFIGURATION",
+            "data_type": "TYPE_STRING",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                2
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "FINAL_TRANSCRIPTS",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                -1,
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_TRANSCRIPTS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_WORDS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_TRANSCRIPTS",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_TRANSCRIPTS_STABILITY",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_WORDS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_WORDS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_WORDS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 1024,
+            "preferred_batch_size": [
+                32,
+                64
+            ],
+            "max_queue_delay_microseconds": 1000
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline_0",
+            "kind": "KIND_CPU",
+            "count": 1,
+            "gpus": [],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "right_padding_size": {
+            "string_value": "1.6"
+        },
+        "vocab_file": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline/1/riva_decoder_vocabulary.txt"
+        },
+        "use_lexicon_free_decoding": {
+            "string_value": "False"
+        },
+        "blank_token": {
+            "string_value": "#"
+        },
+        "forerunner_beam_size_token": {
+            "string_value": "8"
+        },
+        "lm_weight": {
+            "string_value": "0.8"
+        },
+        "set_default_index_to_unk_token": {
+            "string_value": "False"
+        },
+        "forerunner_beam_threshold": {
+            "string_value": "10.0"
+        },
+        "log_add": {
+            "string_value": "True"
+        },
+        "asr_model_delay": {
+            "string_value": "-1"
+        },
+        "max_supported_transcripts": {
+            "string_value": "1"
+        },
+        "chunk_size": {
+            "string_value": "4.8"
+        },
+        "beam_threshold": {
+            "string_value": "20.0"
+        },
+        "max_execution_batch_size": {
+            "string_value": "1024"
+        },
+        "smearing_mode": {
+            "string_value": "max"
+        },
+        "forerunner_beam_size": {
+            "string_value": "8"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "beam_size_token": {
+            "string_value": "16"
+        },
+        "decoder_type": {
+            "string_value": "flashlight"
+        },
+        "unk_token": {
+            "string_value": "<unk>"
+        },
+        "language_model_file": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline/1/en-US_default_6.0.bin"
+        },
+        "lexicon_file": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline/1/lexicon.txt"
+        },
+        "profane_words_file": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline/1/profane_words_file.txt"
+        },
+        "num_tokenization": {
+            "string_value": "1"
+        },
+        "force_decoder_reset_after_ms": {
+            "string_value": "-1"
+        },
+        "unk_score": {
+            "string_value": "-inf"
+        },
+        "left_padding_size": {
+            "string_value": "1.6"
+        },
+        "beam_size": {
+            "string_value": "32"
+        },
+        "cased": {
+            "string_value": "False"
+        },
+        "decoder_num_worker_threads": {
+            "string_value": "-1"
+        },
+        "ms_per_timestep": {
+            "string_value": "40"
+        },
+        "use_subword": {
+            "string_value": "True"
+        },
+        "append_space_to_transcripts": {
+            "string_value": "True"
+        },
+        "tokenizer_model": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline/1/15b100c6e0e74ae598e08fcd85d9f2f6_tokenizer.model"
+        },
+        "return_separate_utterances": {
+            "string_value": "True"
+        },
+        "forerunner_use_lm": {
+            "string_value": "true"
+        },
+        "sil_token": {
+            "string_value": "▁"
+        },
+        "word_insertion_score": {
+            "string_value": "1.0"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:17.520128 102 ctc-decoder-library.cc:21] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming (version 1)
+W0117 15:51:17.520737   111 parameter_parser.cc:146] Parameter 'append_space_to_transcripts' set but unused.
+W0117 15:51:17.520758   111 parameter_parser.cc:146] Parameter 'beam_size' set but unused.
+W0117 15:51:17.520761   111 parameter_parser.cc:146] Parameter 'beam_size_token' set but unused.
+W0117 15:51:17.520762   111 parameter_parser.cc:146] Parameter 'beam_threshold' set but unused.
+W0117 15:51:17.520763   111 parameter_parser.cc:146] Parameter 'blank_token' set but unused.
+W0117 15:51:17.520766   111 parameter_parser.cc:146] Parameter 'cased' set but unused.
+W0117 15:51:17.520766   111 parameter_parser.cc:146] Parameter 'decoder_num_worker_threads' set but unused.
+W0117 15:51:17.520769   111 parameter_parser.cc:146] Parameter 'forerunner_beam_size' set but unused.
+W0117 15:51:17.520771   111 parameter_parser.cc:146] Parameter 'forerunner_beam_size_token' set but unused.
+W0117 15:51:17.520772   111 parameter_parser.cc:146] Parameter 'forerunner_beam_threshold' set but unused.
+W0117 15:51:17.520773   111 parameter_parser.cc:146] Parameter 'forerunner_use_lm' set but unused.
+W0117 15:51:17.520774   111 parameter_parser.cc:146] Parameter 'language_model_file' set but unused.
+W0117 15:51:17.520776   111 parameter_parser.cc:146] Parameter 'lexicon_file' set but unused.
+W0117 15:51:17.520777   111 parameter_parser.cc:146] Parameter 'lm_weight' set but unused.
+W0117 15:51:17.520779   111 parameter_parser.cc:146] Parameter 'log_add' set but unused.
+W0117 15:51:17.520781   111 parameter_parser.cc:146] Parameter 'max_execution_batch_size' set but unused.
+W0117 15:51:17.520783   111 parameter_parser.cc:146] Parameter 'max_supported_transcripts' set but unused.
+W0117 15:51:17.520784   111 parameter_parser.cc:146] Parameter 'num_tokenization' set but unused.
+W0117 15:51:17.520787   111 parameter_parser.cc:146] Parameter 'profane_words_file' set but unused.
+W0117 15:51:17.520787   111 parameter_parser.cc:146] Parameter 'return_separate_utterances' set but unused.
+W0117 15:51:17.520790   111 parameter_parser.cc:146] Parameter 'set_default_index_to_unk_token' set but unused.
+W0117 15:51:17.520793   111 parameter_parser.cc:146] Parameter 'sil_token' set but unused.
+W0117 15:51:17.520794   111 parameter_parser.cc:146] Parameter 'smearing_mode' set but unused.
+W0117 15:51:17.520797   111 parameter_parser.cc:146] Parameter 'tokenizer_model' set but unused.
+W0117 15:51:17.520797   111 parameter_parser.cc:146] Parameter 'unk_score' set but unused.
+W0117 15:51:17.520799   111 parameter_parser.cc:146] Parameter 'unk_token' set but unused.
+W0117 15:51:17.520802   111 parameter_parser.cc:146] Parameter 'use_lexicon_free_decoding' set but unused.
+W0117 15:51:17.520803   111 parameter_parser.cc:146] Parameter 'vocab_file' set but unused.
+W0117 15:51:17.520804   111 parameter_parser.cc:146] Parameter 'word_insertion_score' set but unused.
+I0117 15:51:17.521412 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming",
+    "platform": "",
+    "backend": "riva_asr_decoder",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 1024,
+    "input": [
+        {
+            "name": "CLASS_LOGITS",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                129
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "END_FLAG",
+            "data_type": "TYPE_UINT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "SEGMENTS_START_END",
+            "data_type": "TYPE_INT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                2
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "CUSTOM_CONFIGURATION",
+            "data_type": "TYPE_STRING",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                2
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "FINAL_TRANSCRIPTS",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                -1,
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_TRANSCRIPTS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_WORDS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_TRANSCRIPTS",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_TRANSCRIPTS_STABILITY",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_WORDS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "FINAL_WORDS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "PARTIAL_WORDS_SCORE",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 1024,
+            "preferred_batch_size": [
+                32,
+                64
+            ],
+            "max_queue_delay_microseconds": 1000
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming_0",
+            "kind": "KIND_CPU",
+            "count": 1,
+            "gpus": [],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "max_supported_transcripts": {
+            "string_value": "1"
+        },
+        "vocab_file": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming/1/riva_decoder_vocabulary.txt"
+        },
+        "language_model_file": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming/1/en-US_default_6.0.bin"
+        },
+        "forerunner_use_lm": {
+            "string_value": "true"
+        },
+        "set_default_index_to_unk_token": {
+            "string_value": "False"
+        },
+        "unk_token": {
+            "string_value": "<unk>"
+        },
+        "append_space_to_transcripts": {
+            "string_value": "True"
+        },
+        "lm_weight": {
+            "string_value": "0.8"
+        },
+        "chunk_size": {
+            "string_value": "0.16"
+        },
+        "use_subword": {
+            "string_value": "True"
+        },
+        "asr_model_delay": {
+            "string_value": "-1"
+        },
+        "lexicon_file": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming/1/lexicon.txt"
+        },
+        "forerunner_beam_threshold": {
+            "string_value": "10.0"
+        },
+        "blank_token": {
+            "string_value": "#"
+        },
+        "beam_size": {
+            "string_value": "32"
+        },
+        "log_add": {
+            "string_value": "True"
+        },
+        "forerunner_beam_size_token": {
+            "string_value": "8"
+        },
+        "force_decoder_reset_after_ms": {
+            "string_value": "-1"
+        },
+        "return_separate_utterances": {
+            "string_value": "False"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "tokenizer_model": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming/1/15b100c6e0e74ae598e08fcd85d9f2f6_tokenizer.model"
+        },
+        "beam_threshold": {
+            "string_value": "20.0"
+        },
+        "profane_words_file": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming/1/profane_words_file.txt"
+        },
+        "right_padding_size": {
+            "string_value": "1.92"
+        },
+        "unk_score": {
+            "string_value": "-inf"
+        },
+        "num_tokenization": {
+            "string_value": "1"
+        },
+        "cased": {
+            "string_value": "False"
+        },
+        "decoder_num_worker_threads": {
+            "string_value": "-1"
+        },
+        "left_padding_size": {
+            "string_value": "1.92"
+        },
+        "forerunner_beam_size": {
+            "string_value": "8"
+        },
+        "decoder_type": {
+            "string_value": "flashlight"
+        },
+        "word_insertion_score": {
+            "string_value": "1.0"
+        },
+        "max_execution_batch_size": {
+            "string_value": "1024"
+        },
+        "sil_token": {
+            "string_value": "▁"
+        },
+        "beam_size_token": {
+            "string_value": "16"
+        },
+        "ms_per_timestep": {
+            "string_value": "40"
+        },
+        "smearing_mode": {
+            "string_value": "max"
+        },
+        "use_lexicon_free_decoding": {
+            "string_value": "False"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:17.521470 102 ctc-decoder-library.cc:25] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline_0 (device 0)
+I0117 15:51:20.007947   108 ctc-decoder.cc:179] Beam Decoder initialized successfully!
+I0117 15:51:20.008028 102 tts-postprocessor.cc:305] TRITONBACKEND_ModelInitialize: tts_postprocessor-English-US (version 1)
+I0117 15:51:20.011796 102 backend_model.cc:303] model configuration:
+{
+    "name": "tts_postprocessor-English-US",
+    "platform": "",
+    "backend": "riva_tts_postprocessor",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 8,
+    "input": [
+        {
+            "name": "INPUT",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1,
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "NUM_VALID_SAMPLES",
+            "data_type": "TYPE_INT32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "Prosody_volume",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "OUTPUT",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "priority": "PRIORITY_DEFAULT",
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 8,
+            "preferred_batch_size": [
+                8
+            ],
+            "max_queue_delay_microseconds": 100
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "tts_postprocessor-English-US_0",
+            "kind": "KIND_GPU",
+            "count": 1,
+            "gpus": [
+                0
+            ],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "max_execution_batch_size": {
+            "string_value": "8"
+        },
+        "filter_length": {
+            "string_value": "1024"
+        },
+        "fade_length": {
+            "string_value": "256"
+        },
+        "chunk_num_samples": {
+            "string_value": "40960"
+        },
+        "num_samples_per_frame": {
+            "string_value": "512"
+        },
+        "hop_length": {
+            "string_value": "256"
+        },
+        "max_chunk_size": {
+            "string_value": "131072"
+        },
+        "supports_volume": {
+            "string_value": "True"
+        },
+        "use_denoiser": {
+            "string_value": "False"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:20.011865 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline' version 1
+I0117 15:51:20.014497 102 ctc-decoder-library.cc:25] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming_0 (device 0)
+I0117 15:51:21.743659   111 ctc-decoder.cc:179] Beam Decoder initialized successfully!
+I0117 15:51:21.744460 102 tts-postprocessor.cc:307] TRITONBACKEND_ModelInstanceInitialize: tts_postprocessor-English-US_0 (device 0)
+I0117 15:51:21.746490 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming' version 1
+I0117 15:51:21.758262 102 endpointing_library.cc:20] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-offline-endpointing-streaming-offline (version 1)
+I0117 15:51:21.758840 102 model_lifecycle.cc:693] successfully loaded 'tts_postprocessor-English-US' version 1
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0117 15:51:21.759240   109 parameter_parser.cc:146] Parameter 'chunk_size' set but unused.
+W0117 15:51:21.759500   109 parameter_parser.cc:146] Parameter 'ms_per_timestep' set but unused.
+W0117 15:51:21.759502   109 parameter_parser.cc:146] Parameter 'residue_blanks_at_end' set but unused.
+W0117 15:51:21.759503   109 parameter_parser.cc:146] Parameter 'residue_blanks_at_start' set but unused.
+W0117 15:51:21.759505   109 parameter_parser.cc:146] Parameter 'start_history' set but unused.
+W0117 15:51:21.759505   109 parameter_parser.cc:146] Parameter 'start_th' set but unused.
+W0117 15:51:21.759506   109 parameter_parser.cc:146] Parameter 'stop_history' set but unused.
+W0117 15:51:21.759507   109 parameter_parser.cc:146] Parameter 'stop_th' set but unused.
+W0117 15:51:21.759508   109 parameter_parser.cc:146] Parameter 'streaming' set but unused.
+W0117 15:51:21.759510   109 parameter_parser.cc:146] Parameter 'use_subword' set but unused.
+W0117 15:51:21.759510   109 parameter_parser.cc:146] Parameter 'vocab_file' set but unused.
+I0117 15:51:21.760179 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-offline-endpointing-streaming-offline",
+    "platform": "",
+    "backend": "riva_asr_endpointing",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 2048,
+    "input": [
+        {
+            "name": "CLASS_LOGITS",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                129
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "SEGMENTS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-offline-endpointing-streaming-offline_0",
+            "kind": "KIND_CPU",
+            "count": 1,
+            "gpus": [],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "stop_history": {
+            "string_value": "800"
+        },
+        "ms_per_timestep": {
+            "string_value": "40"
+        },
+        "use_subword": {
+            "string_value": "True"
+        },
+        "start_history": {
+            "string_value": "200"
+        },
+        "endpointing_type": {
+            "string_value": "greedy_ctc"
+        },
+        "residue_blanks_at_end": {
+            "string_value": "0"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "residue_blanks_at_start": {
+            "string_value": "-2"
+        },
+        "vocab_file": {
+            "string_value": "/data/models/conformer-en-US-asr-offline-endpointing-streaming-offline/1/riva_decoder_vocabulary.txt"
+        },
+        "stop_th": {
+            "string_value": "0.98"
+        },
+        "start_th": {
+            "string_value": "0.2"
+        },
+        "chunk_size": {
+            "string_value": "4.8"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:21.786965 102 endpointing_library.cc:24] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-offline-endpointing-streaming-offline_0 (device 0)
+I0117 15:51:21.805489 102 tts-preprocessor.cc:337] TRITONBACKEND_ModelInitialize: tts_preprocessor-English-US (version 1)
+I0117 15:51:21.806224 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-offline-endpointing-streaming-offline' version 1
+W0117 15:51:21.806668 102 tts-preprocessor.cc:284] Parameter abbreviation_path is deprecated
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0117 15:51:21.807776   121 preprocessor.cc:231] TTS character mapping loaded from /data/models/tts_preprocessor-English-US/1/mapping.txt
+I0117 15:51:21.935755   121 preprocessor.cc:269] TTS phonetic mapping loaded from /data/models/tts_preprocessor-English-US/1/ipa_cmudict-0.7b_nv22.10.txt
+I0117 15:51:21.936199   121 preprocessor.cc:282] Abbreviation mapping loaded from /data/models/tts_preprocessor-English-US/1/abbr.txt
+I0117 15:51:21.936406   121 normalize.cc:52] Speech Class far file missing:/data/models/tts_preprocessor-English-US/1/speech_class.far
+I0117 15:51:22.004051   121 preprocessor.cc:292] TTS normalizer loaded from /data/models/tts_preprocessor-English-US/1/
+I0117 15:51:22.004152 102 backend_model.cc:303] model configuration:
+{
+    "name": "tts_preprocessor-English-US",
+    "platform": "",
+    "backend": "riva_tts_preprocessor",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 8,
+    "input": [
+        {
+            "name": "input_string",
+            "data_type": "TYPE_STRING",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        },
+        {
+            "name": "speaker",
+            "data_type": "TYPE_INT64",
+            "format": "FORMAT_NONE",
+            "dims": [
+                1
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "output",
+            "data_type": "TYPE_INT64",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "output_mask",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                1,
+                400,
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "output_length",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "is_last_sentence",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "output_string",
+            "data_type": "TYPE_STRING",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "sentence_num",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "pitch",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "duration",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "volume",
+            "data_type": "TYPE_FP32",
+            "dims": [
+                -1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        },
+        {
+            "name": "speaker",
+            "data_type": "TYPE_INT64",
+            "dims": [
+                1
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "oldest": {
+            "max_candidate_sequences": 8,
+            "preferred_batch_size": [
+                8
+            ],
+            "max_queue_delay_microseconds": 100
+        },
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "END",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_END",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "CORRID",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_CORRID",
+                        "int32_false_true": [],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_UINT64"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "tts_preprocessor-English-US_0",
+            "kind": "KIND_GPU",
+            "count": 1,
+            "gpus": [
+                0
+            ],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "max_sequence_length": {
+            "string_value": "400"
+        },
+        "abbreviations_path": {
+            "string_value": "/data/models/tts_preprocessor-English-US/1/abbr.txt"
+        },
+        "pad_with_space": {
+            "string_value": "True"
+        },
+        "language": {
+            "string_value": "en-US"
+        },
+        "start_of_emphasis_token": {
+            "string_value": "["
+        },
+        "end_of_emphasis_token": {
+            "string_value": "]"
+        },
+        "normalize_pitch": {
+            "string_value": "True"
+        },
+        "g2p_ignore_ambiguous": {
+            "string_value": "True"
+        },
+        "supports_speaker_mixing": {
+            "string_value": "False"
+        },
+        "upper_case_g2p": {
+            "string_value": "True"
+        },
+        "mapping_path": {
+            "string_value": "/data/models/tts_preprocessor-English-US/1/mapping.txt"
+        },
+        "norm_proto_path": {
+            "string_value": "/data/models/tts_preprocessor-English-US/1/"
+        },
+        "pitch_std": {
+            "string_value": "68.77673200611284"
+        },
+        "phone_set": {
+            "string_value": "ipa"
+        },
+        "subvoices": {
+            "string_value": "Female-1:0,Male-1:1,Female-Neutral:2,Male-Neutral:3,Female-Angry:4,Male-Angry:5,Female-Calm:6,Male-Calm:7,Female-Fearful:10,Female-Happy:12,Male-Happy:13,Female-Sad:14"
+        },
+        "dictionary_path": {
+            "string_value": "/data/models/tts_preprocessor-English-US/1/ipa_cmudict-0.7b_nv22.10.txt"
+        },
+        "upper_case_chars": {
+            "string_value": "True"
+        },
+        "supports_ragged_batches": {
+            "string_value": "True"
+        },
+        "max_input_length": {
+            "string_value": "2000"
+        },
+        "enable_emphasis_tag": {
+            "string_value": "True"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": true
+    }
+}
+I0117 15:51:22.004246 102 endpointing_library.cc:20] TRITONBACKEND_ModelInitialize: conformer-en-US-asr-streaming-endpointing-streaming (version 1)
+W0117 15:51:22.004737   112 parameter_parser.cc:146] Parameter 'chunk_size' set but unused.
+W0117 15:51:22.004765   112 parameter_parser.cc:146] Parameter 'ms_per_timestep' set but unused.
+W0117 15:51:22.004768   112 parameter_parser.cc:146] Parameter 'residue_blanks_at_end' set but unused.
+W0117 15:51:22.004770   112 parameter_parser.cc:146] Parameter 'residue_blanks_at_start' set but unused.
+W0117 15:51:22.004772   112 parameter_parser.cc:146] Parameter 'start_history' set but unused.
+W0117 15:51:22.004774   112 parameter_parser.cc:146] Parameter 'start_th' set but unused.
+W0117 15:51:22.004776   112 parameter_parser.cc:146] Parameter 'stop_history' set but unused.
+W0117 15:51:22.004778   112 parameter_parser.cc:146] Parameter 'stop_th' set but unused.
+W0117 15:51:22.004781   112 parameter_parser.cc:146] Parameter 'streaming' set but unused.
+W0117 15:51:22.004782   112 parameter_parser.cc:146] Parameter 'use_subword' set but unused.
+W0117 15:51:22.004784   112 parameter_parser.cc:146] Parameter 'vocab_file' set but unused.
+I0117 15:51:22.005227 102 backend_model.cc:303] model configuration:
+{
+    "name": "conformer-en-US-asr-streaming-endpointing-streaming",
+    "platform": "",
+    "backend": "riva_asr_endpointing",
+    "version_policy": {
+        "latest": {
+            "num_versions": 1
+        }
+    },
+    "max_batch_size": 2048,
+    "input": [
+        {
+            "name": "CLASS_LOGITS",
+            "data_type": "TYPE_FP32",
+            "format": "FORMAT_NONE",
+            "dims": [
+                -1,
+                129
+            ],
+            "is_shape_tensor": false,
+            "allow_ragged_batch": false,
+            "optional": false
+        }
+    ],
+    "output": [
+        {
+            "name": "SEGMENTS_START_END",
+            "data_type": "TYPE_INT32",
+            "dims": [
+                -1,
+                2
+            ],
+            "label_filename": "",
+            "is_shape_tensor": false
+        }
+    ],
+    "batch_input": [],
+    "batch_output": [],
+    "optimization": {
+        "graph": {
+            "level": 0
+        },
+        "priority": "PRIORITY_DEFAULT",
+        "cuda": {
+            "graphs": false,
+            "busy_wait_events": false,
+            "graph_spec": [],
+            "output_copy_stream": true
+        },
+        "input_pinned_memory": {
+            "enable": true
+        },
+        "output_pinned_memory": {
+            "enable": true
+        },
+        "gather_kernel_buffer_threshold": 0,
+        "eager_batching": false
+    },
+    "sequence_batching": {
+        "max_sequence_idle_microseconds": 60000000,
+        "control_input": [
+            {
+                "name": "START",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_START",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            },
+            {
+                "name": "READY",
+                "control": [
+                    {
+                        "kind": "CONTROL_SEQUENCE_READY",
+                        "int32_false_true": [
+                            0,
+                            1
+                        ],
+                        "fp32_false_true": [],
+                        "bool_false_true": [],
+                        "data_type": "TYPE_INVALID"
+                    }
+                ]
+            }
+        ],
+        "state": []
+    },
+    "instance_group": [
+        {
+            "name": "conformer-en-US-asr-streaming-endpointing-streaming_0",
+            "kind": "KIND_CPU",
+            "count": 1,
+            "gpus": [],
+            "secondary_devices": [],
+            "profile": [],
+            "passive": false,
+            "host_policy": ""
+        }
+    ],
+    "default_model_filename": "",
+    "cc_model_filenames": {},
+    "metric_tags": {},
+    "parameters": {
+        "endpointing_type": {
+            "string_value": "greedy_ctc"
+        },
+        "residue_blanks_at_start": {
+            "string_value": "-2"
+        },
+        "stop_th": {
+            "string_value": "0.98"
+        },
+        "residue_blanks_at_end": {
+            "string_value": "0"
+        },
+        "streaming": {
+            "string_value": "True"
+        },
+        "start_history": {
+            "string_value": "200"
+        },
+        "start_th": {
+            "string_value": "0.2"
+        },
+        "use_subword": {
+            "string_value": "True"
+        },
+        "chunk_size": {
+            "string_value": "0.16"
+        },
+        "ms_per_timestep": {
+            "string_value": "40"
+        },
+        "stop_history": {
+            "string_value": "800"
+        },
+        "vocab_file": {
+            "string_value": "/data/models/conformer-en-US-asr-streaming-endpointing-streaming/1/riva_decoder_vocabulary.txt"
+        }
+    },
+    "model_warmup": [],
+    "model_transaction_policy": {
+        "decoupled": false
+    }
+}
+I0117 15:51:22.005279 102 tts-preprocessor.cc:339] TRITONBACKEND_ModelInstanceInitialize: tts_preprocessor-English-US_0 (device 0)
+I0117 15:51:22.005342 102 endpointing_library.cc:24] TRITONBACKEND_ModelInstanceInitialize: conformer-en-US-asr-streaming-endpointing-streaming_0 (device 0)
+I0117 15:51:22.006007 102 model_lifecycle.cc:693] successfully loaded 'tts_preprocessor-English-US' version 1
+I0117 15:51:22.020145 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-streaming-endpointing-streaming' version 1
+I0117 15:51:22.022313 102 model_lifecycle.cc:459] loading: conformer-en-US-asr-streaming:1
+I0117 15:51:22.022734 102 model_lifecycle.cc:459] loading: fastpitch_hifigan_ensemble-English-US:1
+I0117 15:51:22.023250 102 model_lifecycle.cc:693] successfully loaded 'fastpitch_hifigan_ensemble-English-US' version 1
+I0117 15:51:22.023288 102 model_lifecycle.cc:693] successfully loaded 'conformer-en-US-asr-streaming' version 1
+I0117 15:51:22.024128 102 server.cc:563] 
++------------------+------+
+| Repository Agent | Path |
++------------------+------+
++------------------+------+
+
+I0117 15:51:22.024348 102 server.cc:590] 
++------------------------+---------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend                | Path                                                                                  | Config                                                                                                                                                         |
++------------------------+---------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| onnxruntime            | /opt/tritonserver/backends/onnxruntime/libtriton_onnxruntime.so                       | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_asr_features      | /opt/tritonserver/backends/riva_asr_features/libtriton_riva_asr_features.so           | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_tts_preprocessor  | /opt/tritonserver/backends/riva_tts_preprocessor/libtriton_riva_tts_preprocessor.so   | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_nlp_pipeline      | /opt/tritonserver/backends/riva_nlp_pipeline/libtriton_riva_nlp_pipeline.so           | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| tensorrt               | /opt/tritonserver/backends/tensorrt/libtriton_tensorrt.so                             | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_tts_chunker       | /opt/tritonserver/backends/riva_tts_chunker/libtriton_riva_tts_chunker.so             | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_asr_decoder       | /opt/tritonserver/backends/riva_asr_decoder/libtriton_riva_asr_decoder.so             | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_tts_postprocessor | /opt/tritonserver/backends/riva_tts_postprocessor/libtriton_riva_tts_postprocessor.so | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| riva_asr_endpointing   | /opt/tritonserver/backends/riva_asr_endpointing/libtriton_riva_asr_endpointing.so     | {"cmdline":{"auto-complete-config":"false","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++------------------------+---------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0117 15:51:22.024583 102 server.cc:633] 
++-----------------------------------------------------------------+---------+--------+
+| Model                                                           | Version | Status |
++-----------------------------------------------------------------+---------+--------+
+| conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline   | 1       | READY  |
+| conformer-en-US-asr-offline-endpointing-streaming-offline       | 1       | READY  |
+| conformer-en-US-asr-offline-feature-extractor-streaming-offline | 1       | READY  |
+| conformer-en-US-asr-streaming                                   | 1       | READY  |
+| conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming         | 1       | READY  |
+| conformer-en-US-asr-streaming-endpointing-streaming             | 1       | READY  |
+| conformer-en-US-asr-streaming-feature-extractor-streaming       | 1       | READY  |
+| fastpitch_hifigan_ensemble-English-US                           | 1       | READY  |
+| riva-onnx-fastpitch_encoder-English-US                          | 1       | READY  |
+| riva-punctuation-en-US                                          | 1       | READY  |
+| riva-trt-conformer-en-US-asr-streaming-am-streaming             | 1       | READY  |
+| riva-trt-hifigan-English-US                                     | 1       | READY  |
+| riva-trt-riva-punctuation-en-US-nn-bert-base-uncased            | 1       | READY  |
+| spectrogram_chunker-English-US                                  | 1       | READY  |
+| tts_postprocessor-English-US                                    | 1       | READY  |
+| tts_preprocessor-English-US                                     | 1       | READY  |
++-----------------------------------------------------------------+---------+--------+
+
+I0117 15:51:22.102986 102 metrics.cc:864] Collecting metrics for GPU 0: NVIDIA GeForce RTX 3070
+I0117 15:51:22.103209 102 metrics.cc:757] Collecting CPU metrics
+I0117 15:51:22.103980 102 tritonserver.cc:2264] 
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                               |
+| server_version                   | 2.27.0                                                                                                                                                                                               |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+| model_repository_path[0]         | /data/models                                                                                                                                                                                         |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                            |
+| strict_model_config              | 1                                                                                                                                                                                                    |
+| rate_limit                       | OFF                                                                                                                                                                                                  |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+| cuda_memory_pool_byte_size{0}    | 1000000000                                                                                                                                                                                           |
+| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+| strict_readiness                 | 1                                                                                                                                                                                                    |
+| exit_timeout                     | 30                                                                                                                                                                                                   |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0117 15:51:22.104190 102 server.cc:264] Waiting for in-flight requests to complete.
+I0117 15:51:22.104219 102 server.cc:280] Timeout 30: Found 0 model versions that have in-flight inferences
+I0117 15:51:22.104432 102 tts-postprocessor.cc:310] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.104534 102 ctc-decoder-library.cc:27] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.104679 102 tensorrt.cc:5665] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.104769 102 endpointing_library.cc:28] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.105229 102 tensorrt.cc:5665] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.105652 102 feature-extractor.cc:420] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106011 102 pipeline_library.cc:31] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106063 102 spectrogram-chunker.cc:275] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106130 102 spectrogram-chunker.cc:271] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.106210 102 ctc-decoder-library.cc:27] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106278 102 endpointing_library.cc:28] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106359 102 model_lifecycle.cc:578] successfully unloaded 'spectrogram_chunker-English-US' version 1
+I0117 15:51:22.106902 102 feature-extractor.cc:420] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106945 102 tts-preprocessor.cc:342] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.106999 102 tts-preprocessor.cc:338] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.107041 102 server.cc:295] All models are stopped, unloading models
+I0117 15:51:22.107059 102 server.cc:302] Timeout 30: Found 15 live models and 0 in-flight non-inference requests
+I0117 15:51:22.107215 102 tensorrt.cc:5665] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.108277 102 onnxruntime.cc:2640] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0117 15:51:22.112202 102 endpointing_library.cc:23] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.113188 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-offline-endpointing-streaming-offline' version 1
+I0117 15:51:22.114430 102 endpointing_library.cc:23] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.114857 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-streaming-endpointing-streaming' version 1
+I0117 15:51:22.126258 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-streaming' version 1
+I0117 15:51:22.126408 102 model_lifecycle.cc:578] successfully unloaded 'fastpitch_hifigan_ensemble-English-US' version 1
+I0117 15:51:22.156231 102 model_lifecycle.cc:578] successfully unloaded 'tts_preprocessor-English-US' version 1
+I0117 15:51:22.174430 102 pipeline_library.cc:27] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.175115 102 model_lifecycle.cc:578] successfully unloaded 'riva-punctuation-en-US' version 1
+I0117 15:51:22.206575 102 tts-postprocessor.cc:306] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.207038 102 model_lifecycle.cc:578] successfully unloaded 'tts_postprocessor-English-US' version 1
+I0117 15:51:22.239117 102 onnxruntime.cc:2586] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.239639 102 model_lifecycle.cc:578] successfully unloaded 'riva-onnx-fastpitch_encoder-English-US' version 1
+I0117 15:51:22.359293 102 tensorrt.cc:5604] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.359648 102 model_lifecycle.cc:578] successfully unloaded 'riva-trt-riva-punctuation-en-US-nn-bert-base-uncased' version 1
+I0117 15:51:22.380984 102 tensorrt.cc:5604] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.381439 102 model_lifecycle.cc:578] successfully unloaded 'riva-trt-hifigan-English-US' version 1
+I0117 15:51:22.402509 102 ctc-decoder-library.cc:24] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.403107 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-offline-ctc-decoder-cpu-streaming-offline' version 1
+I0117 15:51:22.414365 102 ctc-decoder-library.cc:24] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.414695 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-streaming-ctc-decoder-cpu-streaming' version 1
+I0117 15:51:22.423473 102 feature-extractor.cc:416] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.424074 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-offline-feature-extractor-streaming-offline' version 1
+I0117 15:51:22.460358 102 feature-extractor.cc:416] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.461364 102 model_lifecycle.cc:578] successfully unloaded 'conformer-en-US-asr-streaming-feature-extractor-streaming' version 1
+I0117 15:51:22.528925 102 tensorrt.cc:5604] TRITONBACKEND_ModelFinalize: delete model state
+I0117 15:51:22.529139 102 model_lifecycle.cc:578] successfully unloaded 'riva-trt-conformer-en-US-asr-streaming-am-streaming' version 1
+I0117 15:51:23.107171 102 server.cc:302] Timeout 29: Found 0 live models and 0 in-flight non-inference requests
+error: creating server: Internal - failed to load all models
+/opt/riva/bin/start-riva: line 1: kill: (102) - No such process

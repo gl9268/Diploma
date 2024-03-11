@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .page-header
+    .row.col-lg-6
+        h1=title
+        small &nbsp; Generate speech and adjust its pitch.
+    small &nbsp;
+  .row
+    .col-xs-12.col-sm-8
+      form.row(action="#", onsubmit="formClick(event)")
+        .col-auto
+          input.form-control(type='text', string="string", id="inputString")
+        .col-auto
+          button.btn.btn-primary(type='submit') Generate
+  small &nbsp;
+  .col-sm-6.col-md-4.col-xl-2
+    audio(controls='')
+    source(src='horse.mp3' type='audio/mpeg')
+  .col-sm-8.col-md-8
+    pitch-adjuster(id="adjuster")
+    
+  
