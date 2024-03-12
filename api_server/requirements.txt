@@ -17,3 +17,4 @@ pytorch-lightning==2.0.7
 transformers==4.33.3
 pandas==2.1.1
 sentencepiece==0.1.99
+nemo-text-processing==0.2.0rc0
