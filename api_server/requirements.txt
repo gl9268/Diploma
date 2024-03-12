@@ -20,3 +20,6 @@ transformers==4.33.3
 pandas==2.1.1
 sentencepiece==0.1.99
 nemo-text-processing==0.2.0rc0
+pyannote.core==5.0.0
+pyannote.database==5.0.1
+pyannote.metrics==3.2.1
