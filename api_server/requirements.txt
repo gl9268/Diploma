@@ -4,13 +4,14 @@ grpcio==1.60.0
 ipython==8.12.3
 librosa==0.10.1
 matplotlib==3.8.0
+Cython==3.1.0
+youtokentome==1.0.3
 nemo-toolkit @ git+https://github.com/NVIDIA/NeMo.git@f477e051ec68aaa909ca891c1605383f87e11fbb
 numpy==1.23.5
 nvidia_riva_client==2.14.0
 scipy==1.12.0
 tensorflow==2.14.0
 torch==2.0.1
-Cython==3.0.2
 einops==0.7.0
 hydra-core==1.3.2
 pytorch-lightning==2.0.7
@@ -18,4 +19,3 @@ transformers==4.33.3
 pandas==2.1.1
 sentencepiece==0.1.99
 nemo-text-processing==0.2.0rc0
-youtokentome==1.0.3
