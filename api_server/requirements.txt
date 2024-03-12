@@ -301,6 +301,5 @@ wrapt==1.14.1
 xxhash==3.3.0
 yarg==0.1.9
 yarl==1.9.2
-youtokentome==1.0.6
 zarr==2.16.1
 zipp==1.0.0
