@@ -4,7 +4,7 @@ grpcio==1.60.0
 ipython==8.12.3
 librosa==0.10.1
 matplotlib==3.8.0
-Cython==3.1.0
+Cython==3.0.2
 youtokentome==1.0.3
 nemo-toolkit @ git+https://github.com/NVIDIA/NeMo.git@f477e051ec68aaa909ca891c1605383f87e11fbb
 numpy==1.23.5
