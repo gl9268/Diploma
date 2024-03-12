@@ -18,4 +18,4 @@ transformers==4.33.3
 pandas==2.1.1
 sentencepiece==0.1.99
 nemo-text-processing==0.2.0rc0
-youtokentome 1.0.3
+youtokentome==1.0.3
