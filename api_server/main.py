@@ -1,13 +1,13 @@
 # Import all libraries
-import IPython.display as ipd
-import librosa
-import librosa.display
+#import IPython.display as ipd
+#import librosa
+#import librosa.display
 import numpy as np
 import torch
-from matplotlib import pyplot as plt
-import io
-from scipy.io.wavfile import write
-import os
+#from matplotlib import pyplot as plt
+#import io
+#from scipy.io.wavfile import write
+#import os
 import tensorflow as tf
 
 import json
@@ -15,7 +15,7 @@ import sys
 from flask import Flask, request
 from flask_cors import CORS
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 from nemo.utils import logging
 logging.setLevel(logging.ERROR)
 
@@ -54,8 +54,6 @@ audio_samples = np.frombuffer(resp.audio, dtype=data_type)
 '''
 
 from nemo.collections.common.parts.preprocessing.parsers import CharParser
-import trace
-tracer = trace.Trace(ignoredirs=[trace.__file__])
 
 
 app = Flask(__name__)
@@ -68,27 +66,16 @@ sr = 22050
 
 def str_to_audio(inp, pace=1.0, durs=None, pitch=None):
     with torch.no_grad():
-
-        
         tokens = fastpitch.parse(inp)
-
-        x = fastpitch.cfg.pitch_mean
-        print(x)
+       # x = fastpitch.cfg.pitch_mean
         #print(x.tokens)
         #print(tokens)
         spec, _, durs_pred, _, pitch_pred, *_ = fastpitch(text=tokens, durs=durs, pitch=pitch, speaker=None, pace=pace)
         audio = hifigan.convert_spectrogram_to_audio(spec=spec).to('cpu').numpy()
     return spec, audio, durs_pred, pitch_pred
     
-
 input_string = "I have $250 in my pocket."  # Feel free to change it and experiment
 spec, audio, durs_pred, pitch_pred = str_to_audio(input_string)
-
-#tracer.runfunc(fastpitch.parse, input_string)
-#results = tracer.results()
-#results.write_results(coverdir="trace_output")
-
-
 
 def regulate_len(durations, pace=1.0):
     durations = durations.float() / pace
